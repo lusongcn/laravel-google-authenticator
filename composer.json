@@ -1,0 +1,19 @@
+{
+    "name": "earnp/laravel-google-authenticator",
+    "description": "Laravel 5 GoogleAuthenticator Package",
+    "authors": [
+        {
+            "name": "lusong",
+            "email": "714628712@qq.com",
+            "homepage": "https://phpartisan.cn"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Earnp\\GoogleAuthenticator\\": "src/"
+      }
+    }
+}
