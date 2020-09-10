@@ -37,6 +37,8 @@ composer require simplesoftwareio/simple-qrcode 1.3.*
 php artisan vendor:publish
 ```
 
+注意绑定视图位置为`resources/views/login/google/google.blade.php`，然后您可以在`config/google.php`中修改`账号名`和`绑定验证地址`。
+
 # 使用
 使用方法非常简单，主要为生成验证码和教研验证码
 ### 1、生产验证码
@@ -44,8 +46,8 @@ php artisan vendor:publish
 ```
 // 创建谷歌验证码
 $createSecret = Google::CreateSecret();
-// 您自定义的参数，随表单返回
-$parameter = [["name"=>"usename","value"=>"123"]];
+// 您自定义的参数，随表单返回,用于绑定
+$parameter = [["name"=>"usename","value"=>"123"],["name"=>"users_id","value"=>encrypt("123")]];
 return view('login.google.google', ['createSecret' => $createSecret,"parameter" => $parameter]);
 ```
 
